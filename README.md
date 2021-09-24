@@ -31,4 +31,6 @@ Since training a model takes hours and sometimes a day or more, hence it may not
 
 Download Pretrained model from github: https://github.com/matterport/Mask_RCNN/releases
 
+after Importing the Necessary Libraries and The path for pretrained weights, we have to Inference class to infer the Mask R-CNN Model which you can find on the codes.
+
 
