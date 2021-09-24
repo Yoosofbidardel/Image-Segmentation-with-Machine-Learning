@@ -33,4 +33,34 @@ Download Pretrained model from github: https://github.com/matterport/Mask_RCNN/r
 
 after Importing the Necessary Libraries and The path for pretrained weights, we have to Inference class to infer the Mask R-CNN Model which you can find on the codes.
 
+  here is the model
+  
+  
+![image](https://user-images.githubusercontent.com/70627266/134721955-e77b1e93-6524-47a9-88f0-33a969629510.png)
+
+
+# Loading the Weights
+#Create model objects in inference mode.
+
+
+model = modellib.MaskRCNN(mode="inference", model_dir='mask_rcnn_coco.hy', config=config)
+
+
+#Load weights trained on MS-COCO
+
+
+model.load_weights('mask_rcnn_coco.h5', by_name=True)
+
+ # Sending Image to Model to Generate Predict
+#Run detection
+results = model.detect([image], verbose=1)
+
+** Masking the Results to our Image
+
+# Visualize results
+r = results[0]
+visualize.display_instances(image, r['rois'], r['masks'], r['class_ids'], 
+![image](https://user-images.githubusercontent.com/70627266/134722055-a7a2c493-13e6-4cdf-9e53-2f2592f756a7.png)
+
+
 
